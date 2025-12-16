@@ -1,0 +1,62 @@
+.rules {
+	$parent: &;
+
+	padding: 40px 0 83px;
+	background-color: $color-bg;
+
+	&__group {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		margin-top: 34px;
+
+		& + #{$parent}__group {
+			margin-top: 46px;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__logo {
+		width: 64px;
+		height: 64px;
+	}
+
+	&__text {
+		max-width: 189px;
+		font-size: 15px;
+		text-align: center;
+		margin-top: 30px;
+	}
+
+	&__line {
+		position: relative;
+		width: 206px;
+		height: 1px;
+		margin: 32px -20px 0 -20px;
+		background: repeating-linear-gradient(to right, $color-line 0, $color-line 8px, transparent 8px, transparent 16px);
+
+		&::before,
+		&::after {
+			position: absolute;
+			top: -2px;
+			content: "";
+			width: 5px;
+			height: 5px;
+			border-radius: 50%;
+			background-color: $color-line;
+		}
+
+		&::before {
+			left: 0;
+		}
+
+		&::after {
+			right: 0;
+		}
+	}
+}

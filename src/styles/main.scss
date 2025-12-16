@@ -1,0 +1,30 @@
+/* Libraries */
+@import "../../node_modules/swiper/swiper-bundle.css";
+
+/* Base */
+@import "base/var";
+@import "base/mixin";
+@import "base/fonts";
+@import "base/animation";
+@import "base/global";
+
+/* Blocks */
+@import "blocks/container";
+@import "blocks/button";
+@import "blocks/button-up";
+@import "blocks/title";
+@import "blocks/header";
+@import "blocks/footer";
+@import "blocks/hero";
+@import "blocks/advantages-item";
+@import "blocks/advantages";
+@import "blocks/solutions-card";
+@import "blocks/solutions";
+@import "blocks/banner";
+@import "blocks/reason";
+@import "blocks/video";
+@import "blocks/rules";
+@import "blocks/cases";
+@import "blocks/reviews";
+@import "blocks/news-item";
+@import "blocks/news";

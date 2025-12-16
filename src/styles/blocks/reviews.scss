@@ -1,0 +1,68 @@
+.reviews {
+	padding: 48px 0;
+	background-color: $color-bg;
+
+	&__group {
+		display: flex;
+		margin-top: 43px;
+	}
+
+	&__image {
+		min-width: 142px;
+		max-width: 142px;
+		height: 142px;
+		border-radius: 50%;
+		overflow: hidden;
+		margin-right: 21px;
+	}
+
+	&__bg-image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__text {
+		max-width: 460px;
+		color: $black;
+		font-size: 15px;
+		line-height: 1.4;
+	}
+
+	&__info {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding-left: 32px;
+		margin-left: 20px;
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			content: "";
+			width: 1px;
+			height: 100%;
+			background-color: $black;
+		}
+	}
+
+	&__name {
+		color: $color-button;
+		font-size: 25px;
+	}
+
+	&__position,
+	&__company {
+		font-size: 15px;
+	}
+
+	&__position {
+		margin-top: 16px;
+	}
+
+	&__company {
+		margin-top: 12px;
+	}
+}

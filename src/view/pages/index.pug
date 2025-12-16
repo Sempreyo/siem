@@ -1,0 +1,244 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Siem'
+		};
+
+block main
+	section.hero
+		.hero__bg
+			+picture('hero-bg', 'jpg', 'hero__bg-image', '')
+		.container.hero__container
+			h1.hero__title Solar SIEM
+			.hero__text Единая платформа для мониторинга, обнаружения и&nbsp;реагирования на&nbsp;инциденты
+			+button('Узнать подробее', 'hero__button', '#')
+	section.advantages
+		.container
+			+title('Solar SIEM — это&nbsp;платформа управления кибербезопасностью')
+			.advantages__grid
+				.advantages-item
+					.advantages-item__icon
+						+icon('advantages-1')
+					.advantages-item__text Работает с&nbsp;полным циклом&nbsp;жизни <br> инцидента
+				.advantages-item
+					.advantages-item__icon
+						+icon('advantages-2')
+					.advantages-item__text Экномит до 40% бюджета на внедрении благодаря двум технологиям <br> SIEM и&nbsp;SOAR
+				.advantages-item
+					.advantages-item__icon
+						+icon('advantages-3')
+					.advantages-item__text.
+						Ускоряет работу с&nbsp;инцидентом с&nbsp;помощью экспертизы Solar JSOC,
+						усиленной <span style="white-space: nowrap;">AI-ассистентом</span>
+				.advantages-item
+					.advantages-item__icon
+						+icon('advantages-4')
+					.advantages-item__text Автоматизируется до&nbsp;90%&nbsp;рутины <br> специалиста
+	section.solutions
+		.container.container--big
+			+title('Какие проблемы клиентов решает Solar SIEM?')
+			.solutions__grid
+				.solutions__card.solutions-card.solutions-card--empty
+				.solutions__card.solutions-card
+					.solutions-card__bg
+						+picture('solutions/1', 'png', 'solutions-card__bg-image', '')
+					.solutions-card__title Средний бизнес
+				.solutions__card.solutions-card
+					.solutions-card__text
+						b Проблема
+						ul
+							li Высокий порог входа в&nbsp;разработку и&nbsp;поддержку контента из&nbsp;<span style="white-space: nowrap;">SIEM-систем</span>
+							li Ограниченные ресурсы
+							li Дефицит квалифицированных специалистов
+						b Последствия:
+						p Средний бизнес становится лёгкой мишенью для&nbsp;атак, не&nbsp;имея ресурсов на&nbsp;полноценную защиту
+						.solutions-card__icon
+							+icon('arrow')
+				.solutions__card.solutions-card
+					.solutions-card__text
+						b Решение от&nbsp;Solar SIEM
+						ul
+							li.
+								Встроенный <span style="white-space: nowrap;">AI-ассистент</span> работает
+								на&nbsp;уровне <span style="white-space: nowrap;">senior-специалиста</span>
+							li Наличие SIEM и&nbsp;SOAR закрывает «базовый уровень защиты» и&nbsp;весь цикл работы с&nbsp;инцидентом
+							li Автоматизация процессов мониторинга, обработки и&nbsp;реагирования на&nbsp;инциденты
+							li Экспертиза Solar JSOC из&nbsp;«коробки»
+						b Результат:
+						p.
+							Solar SIEM позволяет бороться компаниям с&nbsp;небольшим штатом и&nbsp;невысоким уровнем экспертизы
+							на&nbsp;равных с&nbsp;крупными организациями
+						.solutions-card__icon
+							+icon('arrow')
+				.solutions__card.solutions-card
+					.solutions-card__text
+						b Решение Solar SIEM
+						ul
+							li Встроенные сценарии <br> реагирования с&nbsp;возможностью <br> гибкой настройки
+							li Профилирование данных для&nbsp;сокращения времени анализа
+							li Простое и&nbsp;удобное управление конфигурациями и&nbsp;исключениями для&nbsp;корреляционных правил
+						b Результат:
+						p Фокус сотрудников на&nbsp;стратегических задачах и&nbsp;предотвращении атак. <br> Рост киберустойчивости <br> инфраструктуры
+						.solutions-card__icon
+							+icon('arrow')
+				.solutions__card.solutions-card
+					.solutions-card__text
+						b Проблема
+						ul
+							li Высокая нагрузка на&nbsp;специалистов SOC
+							li Высокие трудозатраты <br> на&nbsp;рутинные операции
+							li Необходим централизованный <br> сбор данных со&nbsp;всех <br> информационных систем
+						b Последствия:
+						p Ниже эффективность работы специалистов SOC и&nbsp;выше риски позднего реагирования <br> на&nbsp;инциденты
+						.solutions-card__icon
+							+icon('arrow')
+				.solutions__card.solutions-card
+					.solutions-card__bg
+						+picture('solutions/2', 'png', 'solutions-card__bg-image', '')
+					.solutions-card__title Крупный бизнес и&nbsp;госструктуры (собственные SOC)
+				.solutions__card.solutions-card.solutions-card--empty
+	section.banner
+		.container
+			.banner__wrapper
+				.banner__bg
+					+picture('banner/1', 'jpg', 'banner__bg-image', '')
+				.banner__content
+					.banner__title Готовы перейти на&nbsp;Solar SIEM?
+					+button('узнать больше', 'banner__button', '#')
+	section.reason
+		.container
+			+title('Почему выбирают Solar SIEM')
+			.reason__grid
+				.reason__item.reason__item--accent
+					p Снижение совокупной стоимости владения (ТСО)&nbsp;до&nbsp;40%
+					+icon('line')(width='32', height='32')
+				.reason__item
+					p 2&nbsp;технологии - SIEM и&nbsp;SOAR — позволяют оптимизировать бюджет при&nbsp;внедрении решения по&nbsp;отдельным лицензиями
+				.reason__item
+					p Правила и&nbsp;сценарии основаны на&nbsp;опыте крупнейшего в&nbsp;России SOC
+				.reason__item.reason__item--accent
+					p Экспертиза Solar JSOC из&nbsp;«коробки»
+					+icon('line')(width='32', height='32')
+				.reason__item.reason__item--accent
+					p Снижаем порог входа для&nbsp;аналитиков
+					+icon('line')(width='32', height='32')
+				.reason__item
+					p.
+						В Solar SIEM встроен визуальный конструктов сценариев
+						и&nbsp;<span style="white-space: nowrap;">AI-ассистент</span>, который развивается
+						от&nbsp;уверенного «джуна» до&nbsp;«синьора»
+				.reason__item
+					p Поддержка клиента обеспечивается на&nbsp;всех этапах, снимая главный страх рынка — сложность проекта
+				.reason__item.reason__item--accent
+					p Сопровождаем проект внедрения до&nbsp;результата
+	section.video
+		.container
+			.video__wrapper
+				.video__poster
+					+picture('video-poster', 'jpg', 'video__bg-image', '')
+					.video__play
+						+icon('play')(width='41', height='47')
+				video.video__frame
+	section.rules
+		.container
+			+title('Как Solar SIEM меняет правила игры')
+			.rules__group
+				.rules__item
+					+icon('rules-1')(class='rules__logo')
+					.rules__text Полный цикл защиты от&nbsp;кибератак <br> в&nbsp;едином окне
+				.rules__line
+				.rules__item
+					.rules__logo
+						+icon('rules-2')(class='rules__logo')
+					.rules__text Работа из&nbsp;«коробки»: быстрая настройка конфигурации
+				.rules__line
+				.rules__item
+					.rules__logo
+						+icon('rules-3')(class='rules__logo')
+					.rules__text Автоматизация 90% рутины: плейбуки, реагирование, сбор данных
+			.rules__group
+				.rules__item
+					.rules__logo
+						+icon('rules-4')(class='rules__logo')
+					.rules__text Непрерывная <br> доставка новых правил корреляции, источников и&nbsp;парсеров
+				.rules__line
+				.rules__item
+					.rules__logo
+						+icon('rules-5')(class='rules__logo')
+					.rules__text Легкий онбординг <br> новых специалистов ИБ
+				.rules__line
+				.rules__item
+					.rules__logo
+						+icon('rules-6')(class='rules__logo')
+					.rules__text Соответствие требованиям по&nbsp;импортозамещению
+	section.cases
+		.container
+			+title('Кейсы внедрения')
+			.cases__group
+				.cases__logo место для логотипа
+				.cases__text.
+					Автоматизированный программный комплекс для&nbsp;централизованного мониторинга,
+					анализа и&nbsp;реагирования на&nbsp;инциденты ИБ
+	section.reviews
+		.container
+			+title('Отзывы экспертов')
+			.reviews__group
+				.reviews__image
+					+picture('author', 'jpg', 'reviews__bg-image', '')
+				.reviews__text.
+					Компания RT-Solar демонстрирует высокий уровень профессионализма и&nbsp;глубокую экспертизу в&nbsp;области солнечной энергетики.
+					В&nbsp;своей работе специалисты уделяют внимание каждой детали — от&nbsp;подбора оборудования до&nbsp;точности проектных решений.
+					Мы особенно отмечаем инженерный подход и&nbsp;качественную техническую поддержку, что&nbsp;делает RT-Solar надёжным партнёром
+					в&nbsp;сфере внедрения современных солнечных технологий. Сотрудничество с&nbsp;компанией можно охарактеризовать как&nbsp;прозрачное,
+					технологичное и&nbsp;нацеленное на&nbsp;результат.
+				.reviews__info
+					.reviews__name Иван Петров
+					.reviews__position Руководитель направления энергоэффективных технологий
+					.reviews__company Компания: ЭнергоКонсалт
+	section.banner.banner--bottom
+		.container
+			.banner__wrapper
+				.banner__bg
+					+picture('banner/2', 'jpg', 'banner__bg-image', '')
+				.banner__content
+					.banner__title Оцените Solar SIEM в&nbsp;действии
+					+button('Хочу демонстрацию', 'banner__button', '#')
+	section.news
+		.container
+			+title('Новости о&nbsp;продукте')
+			.news__grid
+				.news-item
+					.news-item__image
+						+picture('news/1', 'jpg', 'news-item__bg-image', '')
+					.news-item__content
+						.news-item__title Тема новости
+						.news-item__text.
+							В&nbsp;энергетической компании с&nbsp;распределенными филиалами после <span style="white-space: nowrap;">ИБ-инцидента</span>
+							возникла необходимость контролировать работу администраторов сети, приложений и&nbsp;баз данных
+						.news-item__link
+							span Читать полностью
+							+icon('arrow-right')(width='24', height='24')
+				.news-item
+					.news-item__image
+						+picture('news/2', 'jpg', 'news-item__bg-image', '')
+					.news-item__content
+						.news-item__title Тема новости
+						.news-item__text.
+							В&nbsp;энергетической компании с&nbsp;распределенными филиалами после <span style="white-space: nowrap;">ИБ-инцидента</span>
+							возникла необходимость контролировать работу администраторов сети, приложений и&nbsp;баз данных
+						.news-item__link
+							span Читать полностью
+							+icon('arrow-right')(width='24', height='24')
+				.news-item
+					.news-item__image
+						+picture('news/3', 'jpg', 'news-item__bg-image', '')
+					.news-item__content
+						.news-item__title Тема новости
+						.news-item__text.
+							В&nbsp;энергетической компании с&nbsp;распределенными филиалами после <span style="white-space: nowrap;">ИБ-инцидента</span>
+							возникла необходимость контролировать работу администраторов сети, приложений и&nbsp;баз данных
+						.news-item__link
+							span Читать полностью
+							+icon('arrow-right')(width='24', height='24')

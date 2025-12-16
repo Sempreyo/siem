@@ -1,0 +1,25 @@
+.cases {
+	padding: 80px 0;
+
+	&__group {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
+		gap: 34px;
+		margin-top: 50px;
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 121px;
+		font-size: 16px;
+		border: 1px dashed #a2a2a2;
+	}
+
+	&__text {
+		color: $black;
+		font-size: 18px;
+	}
+}

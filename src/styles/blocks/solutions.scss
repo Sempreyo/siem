@@ -1,0 +1,25 @@
+.solutions {
+	padding: 40px 0 80px;
+
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(4, 400px);
+		justify-content: center;
+		gap: 26px;
+		margin-top: 61px;
+	}
+
+	&__card {
+		max-width: 400px;
+		width: 100%;
+		min-height: 420px;
+
+		&:nth-child(4n + 1) {
+			right: 74px;
+		}
+
+		&:nth-child(4n) {
+			left: 74px;
+		}
+	}
+}

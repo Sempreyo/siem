@@ -1,0 +1,41 @@
+.news-item {
+	width: 100%;
+	border: 1px solid $color-card-border;
+
+	&__image {
+		position: relative;
+		inset: -1px;
+		width: calc(100% + 2px);
+	}
+
+	&__bg-image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		aspect-ratio: 2 / 1;
+	}
+
+	&__content {
+		padding: 17px 15px;
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 20px;
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 1.25;
+		margin-top: 19px;
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		color: $color-button;
+		font-size: 16px;
+		margin-top: 22px;
+	}
+}
