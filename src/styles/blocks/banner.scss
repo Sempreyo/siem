@@ -4,21 +4,36 @@
 	padding: 88px 0 40px;
 	background-color: $color-bg;
 
+	@include max(ti) {
+		padding: 30px 0;
+	}
+
 	&--bottom {
 		padding: 78px 0 40px;
 		background-color: unset;
+
+		@include max(ti) {
+			padding: 30px 0;
+		}
 
 		#{$parent} {
 			&__content {
 				min-height: 329px;
 				max-width: 520px;
 				padding: 0 60px;
+
+				@include max(tl) {
+					max-width: 100%;
+				}
+
+				@include max(ti) {
+					padding: 0 20px;
+				}
 			}
 
 			&__button {
 				max-width: 296px;
 				padding: 12px 20px;
-				font-size: 18px;
 				text-transform: unset;
 			}
 		}
@@ -36,6 +51,16 @@
 	&__bg {
 		position: absolute;
 		inset: 0;
+
+		&::before {
+			@include max(tl) {
+				position: absolute;
+				inset: 0;
+				z-index: 1;
+				content: "";
+				background-color: rgba(0, 0, 0, 0.7);
+			}
+		}
 	}
 
 	&__bg-image {
@@ -53,10 +78,34 @@
 		min-height: 377px;
 		max-width: 455px;
 		padding: 0 37px;
+
+		@include max(tl) {
+			z-index: 1;
+			align-items: center;
+			max-width: 100%;
+		}
+
+		@include max(ti) {
+			padding: 0 20px;
+		}
 	}
 
 	&__title {
 		font-size: 40px;
+
+		@include max(d) {
+			font-size: fluid(38, 40, 992, 1280);
+		}
+
+		@include max(tl) {
+			color: $white;
+			font-size: fluid(34, 38, 768, 992);
+			text-align: center;
+		}
+
+		@include max(ti) {
+			font-size: fluid(28, 34, 0, 768);
+		}
 	}
 
 	&__button {

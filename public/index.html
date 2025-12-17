@@ -10,21 +10,16 @@
   </head>
   <body>
     <header class="header">
-      <div class="container container--medium header__container">
-        <div class="header__logo">
+      <div class="container container--medium header__container"><a class="header__logo" href="#" target="_blank">
           <svg width="105" height="21">
             <use xlink:href="./images/sprite.svg#logo-solar"></use>
-          </svg>
-        </div>
-        <div class="header__logo">
+          </svg></a><a class="header__logo" href="#" target="_blank">
           <svg width="94" height="17">
             <use xlink:href="./images/sprite.svg#logo-cnews"></use>
-          </svg>
-        </div>
-      </div>
+          </svg></a></div>
     </header>
     <main class="main">
-      <section class="hero">
+      <section class="hero animate">
         <div class="hero__bg">
           <picture>
             <source srcset="./images/hero-bg.webp 1x, ./images/hero-bg@2x.webp 2x" type="image/webp">
@@ -32,11 +27,11 @@
           </picture>
         </div>
         <div class="container hero__container">
-          <h1 class="hero__title">Solar SIEM</h1>
+          <h1 class="hero__title split-title">Solar SIEM</h1>
           <div class="hero__text">Единая платформа для мониторинга, обнаружения и&nbsp;реагирования на&nbsp;инциденты</div><a class="button hero__button" href="#"><span>Узнать подробее</span></a>
         </div>
       </section>
-      <section class="advantages">
+      <section class="advantages animate">
         <div class="container">
           <h2 class="title">Solar SIEM — это&nbsp;платформа управления кибербезопасностью</h2>
           <div class="advantages__grid">
@@ -83,7 +78,7 @@
           <h2 class="title">Какие проблемы клиентов решает Solar SIEM?</h2>
           <div class="solutions__grid">
             <div class="solutions__card solutions-card solutions-card--empty"></div>
-            <div class="solutions__card solutions-card">
+            <div class="solutions__card solutions-card solutions-card--bg solutions-card--1">
               <div class="solutions-card__bg">
                 <picture>
                   <source srcset="./images/solutions/1.webp 1x, ./images/solutions/1@2x.webp 2x" type="image/webp">
@@ -92,7 +87,7 @@
               </div>
               <div class="solutions-card__title">Средний бизнес</div>
             </div>
-            <div class="solutions__card solutions-card">
+            <div class="solutions__card solutions-card solutions-card--2">
               <div class="solutions-card__text"><b>Проблема</b>
                 <ul>
                   <li>Высокий порог входа в&nbsp;разработку и&nbsp;поддержку контента из&nbsp;<span style="white-space: nowrap;">SIEM-систем</span></li>
@@ -107,7 +102,7 @@
                 </div>
               </div>
             </div>
-            <div class="solutions__card solutions-card">
+            <div class="solutions__card solutions-card solutions-card--3">
               <div class="solutions-card__text"><b>Решение от&nbsp;Solar SIEM</b>
                 <ul>
                   <li>
@@ -129,7 +124,7 @@
                 </div>
               </div>
             </div>
-            <div class="solutions__card solutions-card">
+            <div class="solutions__card solutions-card solutions-card--4">
               <div class="solutions-card__text"><b>Решение Solar SIEM</b>
                 <ul>
                   <li>Встроенные сценарии <br> реагирования с&nbsp;возможностью <br> гибкой настройки</li>
@@ -144,7 +139,7 @@
                 </div>
               </div>
             </div>
-            <div class="solutions__card solutions-card">
+            <div class="solutions__card solutions-card solutions-card--5">
               <div class="solutions-card__text"><b>Проблема</b>
                 <ul>
                   <li>Высокая нагрузка на&nbsp;специалистов SOC</li>
@@ -159,7 +154,7 @@
                 </div>
               </div>
             </div>
-            <div class="solutions__card solutions-card">
+            <div class="solutions__card solutions-card solutions-card--bg solutions-card--6">
               <div class="solutions-card__bg">
                 <picture>
                   <source srcset="./images/solutions/2.webp 1x, ./images/solutions/2@2x.webp 2x" type="image/webp">
@@ -193,25 +188,31 @@
           <div class="reason__grid">
             <div class="reason__item reason__item--accent">
               <p>Снижение совокупной стоимости владения (ТСО)&nbsp;до&nbsp;40%</p>
-              <svg width="32" height="32">
+              <svg class="reason__line" width="32" height="32">
                 <use xlink:href="./images/sprite.svg#line"></use>
               </svg>
             </div>
             <div class="reason__item">
               <p>2&nbsp;технологии - SIEM и&nbsp;SOAR — позволяют оптимизировать бюджет при&nbsp;внедрении решения по&nbsp;отдельным лицензиями</p>
+              <svg class="reason__line reason__line--mobile" width="32" height="32">
+                <use xlink:href="./images/sprite.svg#line"></use>
+              </svg>
             </div>
             <div class="reason__item">
               <p>Правила и&nbsp;сценарии основаны на&nbsp;опыте крупнейшего в&nbsp;России SOC</p>
+              <svg class="reason__line reason__line--mobile" width="32" height="32">
+                <use xlink:href="./images/sprite.svg#line"></use>
+              </svg>
             </div>
             <div class="reason__item reason__item--accent">
               <p>Экспертиза Solar JSOC из&nbsp;«коробки»</p>
-              <svg width="32" height="32">
+              <svg class="reason__line" width="32" height="32">
                 <use xlink:href="./images/sprite.svg#line"></use>
               </svg>
             </div>
             <div class="reason__item reason__item--accent">
               <p>Снижаем порог входа для&nbsp;аналитиков</p>
-              <svg width="32" height="32">
+              <svg class="reason__line" width="32" height="32">
                 <use xlink:href="./images/sprite.svg#line"></use>
               </svg>
             </div>
@@ -221,9 +222,15 @@
                 и&nbsp;<span style="white-space: nowrap;">AI-ассистент</span>, который развивается
                 от&nbsp;уверенного «джуна» до&nbsp;«синьора»
               </p>
+              <svg class="reason__line reason__line--mobile" width="32" height="32">
+                <use xlink:href="./images/sprite.svg#line"></use>
+              </svg>
             </div>
             <div class="reason__item">
               <p>Поддержка клиента обеспечивается на&nbsp;всех этапах, снимая главный страх рынка — сложность проекта</p>
+              <svg class="reason__line reason__line--mobile" width="32" height="32">
+                <use xlink:href="./images/sprite.svg#line"></use>
+              </svg>
             </div>
             <div class="reason__item reason__item--accent">
               <p>Сопровождаем проект внедрения до&nbsp;результата</p>
@@ -245,7 +252,9 @@
                 </svg>
               </div>
             </div>
-            <video class="video__frame"></video>
+            <video class="video__frame" controls>
+              <source src="./images/video.mp4" type="video/mp4">
+            </video>
           </div>
         </div>
       </section>
@@ -324,11 +333,18 @@
         <div class="container">
           <h2 class="title">Отзывы экспертов</h2>
           <div class="reviews__group">
-            <div class="reviews__image">
-              <picture>
-                <source srcset="./images/author.webp 1x, ./images/author@2x.webp 2x" type="image/webp">
-                <source srcset="./images/author.webp 1x, ./images/author@2x.webp 2x" type="image/webp"><img class="reviews__bg-image" src="./images/author.jpg" srcset="./images/author.jpg 1x, ./images/author@2x.jpg 2x" alt="">
-              </picture>
+            <div class="reviews__left">
+              <div class="reviews__image">
+                <picture>
+                  <source srcset="./images/author.webp 1x, ./images/author@2x.webp 2x" type="image/webp">
+                  <source srcset="./images/author.webp 1x, ./images/author@2x.webp 2x" type="image/webp"><img class="reviews__bg-image" src="./images/author.jpg" srcset="./images/author.jpg 1x, ./images/author@2x.jpg 2x" alt="">
+                </picture>
+              </div>
+              <div class="reviews__info reviews__info--mobile">
+                <div class="reviews__name">Иван Петров</div>
+                <div class="reviews__position">Руководитель направления энергоэффективных технологий</div>
+                <div class="reviews__company">Компания: ЭнергоКонсалт</div>
+              </div>
             </div>
             <div class="reviews__text">
               Компания RT-Solar демонстрирует высокий уровень профессионализма и&nbsp;глубокую экспертизу в&nbsp;области солнечной энергетики.
@@ -433,18 +449,13 @@
     
     -->
     <footer class="footer">
-      <div class="container container--medium footer__container">
-        <div class="footer__logo">
+      <div class="container container--medium footer__container"><a class="footer__logo" href="#" target="_blank">
           <svg width="105" height="21">
             <use xlink:href="./images/sprite.svg#logo-solar"></use>
-          </svg>
-        </div>
-        <div class="footer__logo">
+          </svg></a><a class="footer__logo" href="#" target="_blank">
           <svg width="94" height="17">
             <use xlink:href="./images/sprite.svg#logo-cnews"></use>
-          </svg>
-        </div>
-      </div>
+          </svg></a></div>
     </footer>
   </body>
   <script src="js/main.min.js" defer></script>

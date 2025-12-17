@@ -1,12 +1,32 @@
 .hero {
+	$parent: &;
+
 	position: relative;
 	min-height: 847px;
 	height: 100vh;
 	padding: 97px 0 0;
 
+	&.animate {
+		#{$parent} {
+			&__bg {
+				opacity: 0;
+			}
+
+			&__text {
+				transform: translateY(30px);
+				opacity: 0;
+			}
+
+			&__button {
+				opacity: 0;
+			}
+		}
+	}
+
 	&__bg {
 		position: absolute;
 		inset: 0;
+		transition: 0.3s ease;
 	}
 
 	&__bg-image {
@@ -29,6 +49,32 @@
 		line-height: 1;
 		letter-spacing: -0.02em;
 		text-align: center;
+
+		&.split-title {
+			overflow: hidden;
+			opacity: 0;
+		}
+
+		&.visible {
+			opacity: 1;
+		}
+
+		@include max(d) {
+			font-size: fluid(100, 132, 992, 1280);
+		}
+
+		@include max(tl) {
+			font-size: fluid(80, 100, 768, 992);
+		}
+
+		@include max(ti) {
+			font-size: fluid(40, 80, 0, 768);
+		}
+
+		.char {
+			transform: translateY(100%);
+			transition: 0.3s ease;
+		}
 	}
 
 	&__text {
@@ -36,9 +82,23 @@
 		font-size: 30px;
 		text-align: center;
 		margin-top: 8px;
+		transition: 0.3s ease 1.2s;
+
+		@include max(d) {
+			font-size: fluid(28, 30, 992, 1280);
+		}
+
+		@include max(tl) {
+			font-size: fluid(26, 28, 768, 992);
+		}
+
+		@include max(ti) {
+			font-size: fluid(22, 26, 0, 768);
+		}
 	}
 
 	&__button {
 		margin: auto auto 100px;
+		transition: 0.3s ease 1.5s;
 	}
 }

@@ -1,11 +1,28 @@
 .news {
 	padding: 40px 0 80px;
 
+	@include max(ti) {
+		padding: 30px 0 80px;
+	}
+
 	&__grid {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		justify-content: center;
 		gap: 24px;
 		margin-top: 40px;
+
+		@include max(tl) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include max(ti) {
+			gap: 12px;
+			margin-top: 30px;
+		}
+
+		@include max(t) {
+			grid-template-columns: repeat(1, 1fr);
+		}
 	}
 }

@@ -17,6 +17,14 @@
 	cursor: pointer;
 	transition: 0.3s ease;
 
+	@include max(tl) {
+		font-size: fluid(16, 18, 768, 992);
+	}
+
+	@include max(ti) {
+		font-size: fluid(14, 16, 0, 768);
+	}
+
 	&:hover {
 		background-color: rgba($color-button, 0.7);
 	}

@@ -7,14 +7,14 @@ block vars
 		};
 
 block main
-	section.hero
+	section.hero.animate
 		.hero__bg
 			+picture('hero-bg', 'jpg', 'hero__bg-image', '')
 		.container.hero__container
-			h1.hero__title Solar SIEM
+			h1.hero__title.split-title Solar SIEM
 			.hero__text Единая платформа для мониторинга, обнаружения и&nbsp;реагирования на&nbsp;инциденты
 			+button('Узнать подробее', 'hero__button', '#')
-	section.advantages
+	section.advantages.animate
 		.container
 			+title('Solar SIEM — это&nbsp;платформа управления кибербезопасностью')
 			.advantages__grid
@@ -41,11 +41,11 @@ block main
 			+title('Какие проблемы клиентов решает Solar SIEM?')
 			.solutions__grid
 				.solutions__card.solutions-card.solutions-card--empty
-				.solutions__card.solutions-card
+				.solutions__card.solutions-card.solutions-card--bg.solutions-card--1
 					.solutions-card__bg
 						+picture('solutions/1', 'png', 'solutions-card__bg-image', '')
 					.solutions-card__title Средний бизнес
-				.solutions__card.solutions-card
+				.solutions__card.solutions-card.solutions-card--2
 					.solutions-card__text
 						b Проблема
 						ul
@@ -56,7 +56,7 @@ block main
 						p Средний бизнес становится лёгкой мишенью для&nbsp;атак, не&nbsp;имея ресурсов на&nbsp;полноценную защиту
 						.solutions-card__icon
 							+icon('arrow')
-				.solutions__card.solutions-card
+				.solutions__card.solutions-card.solutions-card--3
 					.solutions-card__text
 						b Решение от&nbsp;Solar SIEM
 						ul
@@ -72,7 +72,7 @@ block main
 							на&nbsp;равных с&nbsp;крупными организациями
 						.solutions-card__icon
 							+icon('arrow')
-				.solutions__card.solutions-card
+				.solutions__card.solutions-card.solutions-card--4
 					.solutions-card__text
 						b Решение Solar SIEM
 						ul
@@ -83,7 +83,7 @@ block main
 						p Фокус сотрудников на&nbsp;стратегических задачах и&nbsp;предотвращении атак. <br> Рост киберустойчивости <br> инфраструктуры
 						.solutions-card__icon
 							+icon('arrow')
-				.solutions__card.solutions-card
+				.solutions__card.solutions-card.solutions-card--5
 					.solutions-card__text
 						b Проблема
 						ul
@@ -94,7 +94,7 @@ block main
 						p Ниже эффективность работы специалистов SOC и&nbsp;выше риски позднего реагирования <br> на&nbsp;инциденты
 						.solutions-card__icon
 							+icon('arrow')
-				.solutions__card.solutions-card
+				.solutions__card.solutions-card.solutions-card--bg.solutions-card--6
 					.solutions-card__bg
 						+picture('solutions/2', 'png', 'solutions-card__bg-image', '')
 					.solutions-card__title Крупный бизнес и&nbsp;госструктуры (собственные SOC)
@@ -113,24 +113,28 @@ block main
 			.reason__grid
 				.reason__item.reason__item--accent
 					p Снижение совокупной стоимости владения (ТСО)&nbsp;до&nbsp;40%
-					+icon('line')(width='32', height='32')
+					+icon('line')(width='32', height='32', class='reason__line')
 				.reason__item
 					p 2&nbsp;технологии - SIEM и&nbsp;SOAR — позволяют оптимизировать бюджет при&nbsp;внедрении решения по&nbsp;отдельным лицензиями
+					+icon('line')(width='32', height='32', class='reason__line reason__line--mobile')
 				.reason__item
 					p Правила и&nbsp;сценарии основаны на&nbsp;опыте крупнейшего в&nbsp;России SOC
+					+icon('line')(width='32', height='32', class='reason__line reason__line--mobile')
 				.reason__item.reason__item--accent
 					p Экспертиза Solar JSOC из&nbsp;«коробки»
-					+icon('line')(width='32', height='32')
+					+icon('line')(width='32', height='32', class='reason__line')
 				.reason__item.reason__item--accent
 					p Снижаем порог входа для&nbsp;аналитиков
-					+icon('line')(width='32', height='32')
+					+icon('line')(width='32', height='32', class='reason__line')
 				.reason__item
 					p.
 						В Solar SIEM встроен визуальный конструктов сценариев
 						и&nbsp;<span style="white-space: nowrap;">AI-ассистент</span>, который развивается
 						от&nbsp;уверенного «джуна» до&nbsp;«синьора»
+					+icon('line')(width='32', height='32', class='reason__line reason__line--mobile')
 				.reason__item
 					p Поддержка клиента обеспечивается на&nbsp;всех этапах, снимая главный страх рынка — сложность проекта
+					+icon('line')(width='32', height='32', class='reason__line reason__line--mobile')
 				.reason__item.reason__item--accent
 					p Сопровождаем проект внедрения до&nbsp;результата
 	section.video
@@ -140,7 +144,8 @@ block main
 					+picture('video-poster', 'jpg', 'video__bg-image', '')
 					.video__play
 						+icon('play')(width='41', height='47')
-				video.video__frame
+				video.video__frame(controls)
+					source(src='./images/video.mp4', type='video/mp4')
 	section.rules
 		.container
 			+title('Как Solar SIEM меняет правила игры')
@@ -185,8 +190,13 @@ block main
 		.container
 			+title('Отзывы экспертов')
 			.reviews__group
-				.reviews__image
-					+picture('author', 'jpg', 'reviews__bg-image', '')
+				.reviews__left
+					.reviews__image
+						+picture('author', 'jpg', 'reviews__bg-image', '')
+					.reviews__info.reviews__info--mobile
+						.reviews__name Иван Петров
+						.reviews__position Руководитель направления энергоэффективных технологий
+						.reviews__company Компания: ЭнергоКонсалт
 				.reviews__text.
 					Компания RT-Solar демонстрирует высокий уровень профессионализма и&nbsp;глубокую экспертизу в&nbsp;области солнечной энергетики.
 					В&nbsp;своей работе специалисты уделяют внимание каждой детали — от&nbsp;подбора оборудования до&nbsp;точности проектных решений.
