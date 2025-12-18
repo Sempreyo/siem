@@ -1,4 +1,6 @@
 .solutions-card {
+	$parent: &;
+
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -8,6 +10,7 @@
 	min-height: 420px;
 	padding: 21px 15px 21px 17px;
 	background-color: $color-card;
+	transition: 0.3s ease;
 
 	@include max(d) {
 		max-width: 100%;
@@ -16,6 +19,32 @@
 	@include max(ti) {
 		min-height: 300px;
 		padding: 30px 15px 60px 15px;
+	}
+
+	&[data-solution-order="2"] {
+		transition-delay: 0.4s;
+	}
+
+	&[data-solution-order="3"] {
+		transition-delay: 0.8s;
+	}
+
+	&[data-solution-order="4"] {
+		transition-delay: 1.2s;
+	}
+
+	&.animate {
+		opacity: 0;
+
+		&[data-solution-order="1"],
+		&[data-solution-order="2"] {
+			transform: translateX(-50px);
+		}
+
+		&[data-solution-order="3"],
+		&[data-solution-order="4"] {
+			transform: translateX(50px);
+		}
 	}
 
 	&--empty {
@@ -64,6 +93,15 @@
 	&--6 {
 		@include max(d) {
 			order: 1;
+		}
+	}
+
+	&__link {
+		position: absolute;
+		inset: 0;
+
+		&:hover ~ #{$parent}__text #{$parent}__icon {
+			transform: scale(1.15);
 		}
 	}
 
@@ -142,6 +180,7 @@
 		background-color: $color-button;
 		border-radius: 50%;
 		overflow: hidden;
+		transition: 0.3s ease;
 
 		svg {
 			width: 100%;

@@ -2,6 +2,7 @@
 	$parent: &;
 
 	position: relative;
+	z-index: 10;
 	background-color: $color-button;
 	padding: 28px 0;
 
@@ -17,6 +18,69 @@
 
 		&:hover {
 			opacity: 0.7;
+		}
+	}
+
+	&__adv {
+		position: relative;
+		cursor: pointer;
+
+		&:hover {
+			#{$parent}__adv-tooltip {
+				opacity: 1;
+				pointer-events: auto;
+			}
+		}
+
+		span {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			color: $white;
+			font-size: 12px;
+
+			&::before {
+				content: "";
+				width: 5px;
+				height: 5px;
+				background-color: $white;
+			}
+		}
+	}
+
+	&__adv-tooltip {
+		position: absolute;
+		left: -100px;
+		bottom: 100%;
+		width: 270px;
+		border: 2px solid $color-button;
+		background: rgba($white, 0.7);
+		backdrop-filter: blur(11px);
+		border-radius: 2px;
+		padding: 20px 10px;
+		opacity: 0;
+		pointer-events: none;
+		transition: 0.3s ease;
+	}
+
+	&__adv-tooltip-block {
+		color: $color-text;
+		font-size: 12px;
+		line-height: 1.2;
+
+		a {
+			color: $color-text;
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		& + #{$parent}__adv-tooltip-block {
+			margin-top: 12px;
+			padding-top: 12px;
+			border-top: 1px solid $color-text;
 		}
 	}
 }

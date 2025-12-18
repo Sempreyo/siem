@@ -18,7 +18,7 @@
 			}
 
 			&__button {
-				opacity: 0;
+				height: 0;
 			}
 		}
 	}
@@ -82,7 +82,7 @@
 		font-size: 30px;
 		text-align: center;
 		margin-top: 8px;
-		transition: 0.3s ease 1.2s;
+		transition: 0.3s ease 1s;
 
 		@include max(d) {
 			font-size: fluid(28, 30, 992, 1280);
@@ -99,6 +99,9 @@
 
 	&__button {
 		margin: auto auto 100px;
-		transition: 0.3s ease 1.5s;
+		padding: 0;
+		height: 55px;
+		overflow: hidden;
+		transition: background-color 0.3s ease, height 0.3s ease 1.3s;
 	}
 }

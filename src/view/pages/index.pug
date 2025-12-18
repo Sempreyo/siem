@@ -45,7 +45,8 @@ block main
 					.solutions-card__bg
 						+picture('solutions/1', 'png', 'solutions-card__bg-image', '')
 					.solutions-card__title Средний бизнес
-				.solutions__card.solutions-card.solutions-card--2
+				.solutions__card.solutions-card.solutions-card--2.animate(data-solution-order='1')
+					a.solutions-card__link(href='#', target='_blank')
 					.solutions-card__text
 						b Проблема
 						ul
@@ -56,7 +57,8 @@ block main
 						p Средний бизнес становится лёгкой мишенью для&nbsp;атак, не&nbsp;имея ресурсов на&nbsp;полноценную защиту
 						.solutions-card__icon
 							+icon('arrow')
-				.solutions__card.solutions-card.solutions-card--3
+				.solutions__card.solutions-card.solutions-card--3.animate(data-solution-order='2')
+					a.solutions-card__link(href='#', target='_blank')
 					.solutions-card__text
 						b Решение от&nbsp;Solar SIEM
 						ul
@@ -72,7 +74,8 @@ block main
 							на&nbsp;равных с&nbsp;крупными организациями
 						.solutions-card__icon
 							+icon('arrow')
-				.solutions__card.solutions-card.solutions-card--4
+				.solutions__card.solutions-card.solutions-card--4.animate(data-solution-order='4')
+					a.solutions-card__link(href='#', target='_blank')
 					.solutions-card__text
 						b Решение Solar SIEM
 						ul
@@ -83,7 +86,8 @@ block main
 						p Фокус сотрудников на&nbsp;стратегических задачах и&nbsp;предотвращении атак. <br> Рост киберустойчивости <br> инфраструктуры
 						.solutions-card__icon
 							+icon('arrow')
-				.solutions__card.solutions-card.solutions-card--5
+				.solutions__card.solutions-card.solutions-card--5.animate(data-solution-order='3')
+					a.solutions-card__link(href='#', target='_blank')
 					.solutions-card__text
 						b Проблема
 						ul
@@ -111,31 +115,31 @@ block main
 		.container
 			+title('Почему выбирают Solar SIEM')
 			.reason__grid
-				.reason__item.reason__item--accent
+				.reason__item.reason__item--accent.animate-single
 					p Снижение совокупной стоимости владения (ТСО)&nbsp;до&nbsp;40%
 					+icon('line')(width='32', height='32', class='reason__line')
-				.reason__item
+				.reason__item.animate-single
 					p 2&nbsp;технологии - SIEM и&nbsp;SOAR — позволяют оптимизировать бюджет при&nbsp;внедрении решения по&nbsp;отдельным лицензиями
 					+icon('line')(width='32', height='32', class='reason__line reason__line--mobile')
-				.reason__item
+				.reason__item.animate-single
 					p Правила и&nbsp;сценарии основаны на&nbsp;опыте крупнейшего в&nbsp;России SOC
 					+icon('line')(width='32', height='32', class='reason__line reason__line--mobile')
-				.reason__item.reason__item--accent
+				.reason__item.reason__item--accent.animate-single
 					p Экспертиза Solar JSOC из&nbsp;«коробки»
 					+icon('line')(width='32', height='32', class='reason__line')
-				.reason__item.reason__item--accent
+				.reason__item.reason__item--accent.animate-single
 					p Снижаем порог входа для&nbsp;аналитиков
 					+icon('line')(width='32', height='32', class='reason__line')
-				.reason__item
+				.reason__item.animate-single
 					p.
 						В Solar SIEM встроен визуальный конструктов сценариев
 						и&nbsp;<span style="white-space: nowrap;">AI-ассистент</span>, который развивается
 						от&nbsp;уверенного «джуна» до&nbsp;«синьора»
 					+icon('line')(width='32', height='32', class='reason__line reason__line--mobile')
-				.reason__item
+				.reason__item.animate-single
 					p Поддержка клиента обеспечивается на&nbsp;всех этапах, снимая главный страх рынка — сложность проекта
 					+icon('line')(width='32', height='32', class='reason__line reason__line--mobile')
-				.reason__item.reason__item--accent
+				.reason__item.reason__item--accent.animate-single
 					p Сопровождаем проект внедрения до&nbsp;результата
 	section.video
 		.container
@@ -149,7 +153,7 @@ block main
 	section.rules
 		.container
 			+title('Как Solar SIEM меняет правила игры')
-			.rules__group
+			.rules__group.animate(data-rules-order='1')
 				.rules__item
 					+icon('rules-1')(class='rules__logo')
 					.rules__text Полный цикл защиты от&nbsp;кибератак <br> в&nbsp;едином окне
@@ -163,7 +167,7 @@ block main
 					.rules__logo
 						+icon('rules-3')(class='rules__logo')
 					.rules__text Автоматизация 90% рутины: плейбуки, реагирование, сбор данных
-			.rules__group
+			.rules__group.animate(data-rules-order='2')
 				.rules__item
 					.rules__logo
 						+icon('rules-4')(class='rules__logo')
@@ -178,7 +182,7 @@ block main
 					.rules__logo
 						+icon('rules-6')(class='rules__logo')
 					.rules__text Соответствие требованиям по&nbsp;импортозамещению
-	section.cases
+	section.cases.animate
 		.container
 			+title('Кейсы внедрения')
 			.cases__group
@@ -220,6 +224,7 @@ block main
 			+title('Новости о&nbsp;продукте')
 			.news__grid
 				.news-item
+					a.news-item__link(href='#', target='_blank')
 					.news-item__image
 						+picture('news/1', 'jpg', 'news-item__bg-image', '')
 					.news-item__content
@@ -227,10 +232,11 @@ block main
 						.news-item__text.
 							В&nbsp;энергетической компании с&nbsp;распределенными филиалами после <span style="white-space: nowrap;">ИБ-инцидента</span>
 							возникла необходимость контролировать работу администраторов сети, приложений и&nbsp;баз данных
-						.news-item__link
+						.news-item__more
 							span Читать полностью
 							+icon('arrow-right')(width='24', height='24')
 				.news-item
+					a.news-item__link(href='#', target='_blank')
 					.news-item__image
 						+picture('news/2', 'jpg', 'news-item__bg-image', '')
 					.news-item__content
@@ -238,10 +244,11 @@ block main
 						.news-item__text.
 							В&nbsp;энергетической компании с&nbsp;распределенными филиалами после <span style="white-space: nowrap;">ИБ-инцидента</span>
 							возникла необходимость контролировать работу администраторов сети, приложений и&nbsp;баз данных
-						.news-item__link
+						.news-item__more
 							span Читать полностью
 							+icon('arrow-right')(width='24', height='24')
 				.news-item
+					a.news-item__link(href='#', target='_blank')
 					.news-item__image
 						+picture('news/3', 'jpg', 'news-item__bg-image', '')
 					.news-item__content
@@ -249,6 +256,6 @@ block main
 						.news-item__text.
 							В&nbsp;энергетической компании с&nbsp;распределенными филиалами после <span style="white-space: nowrap;">ИБ-инцидента</span>
 							возникла необходимость контролировать работу администраторов сети, приложений и&nbsp;баз данных
-						.news-item__link
+						.news-item__more
 							span Читать полностью
 							+icon('arrow-right')(width='24', height='24')

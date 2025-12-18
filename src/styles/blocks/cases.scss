@@ -1,8 +1,24 @@
 .cases {
+	$parent: &;
+
 	padding: 80px 0;
 
 	@include max(ti) {
 		padding: 30px 0;
+	}
+
+	&.animate {
+		#{$parent} {
+			&__logo {
+				opacity: 0;
+				transform: translateX(-70px);
+			}
+
+			&__text {
+				transform: translateX(70px);
+				opacity: 0;
+			}
+		}
 	}
 
 	&__group {
@@ -25,11 +41,13 @@
 		min-height: 121px;
 		font-size: 16px;
 		border: 1px dashed #a2a2a2;
+		transition: 0.3s ease;
 	}
 
 	&__text {
 		color: $black;
 		font-size: 18px;
+		transition: 0.3s ease;
 
 		@include max(tl) {
 			font-size: fluid(16, 18, 768, 992);
