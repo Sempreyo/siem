@@ -7,51 +7,53 @@
 	justify-content: center;
 	max-width: 400px;
 	width: 100%;
-	min-height: 420px;
-	padding: 21px 15px 21px 17px;
-	background-color: $color-card;
+	cursor: pointer;
 	transition: 0.3s ease;
 
 	@include max(d) {
 		max-width: 100%;
 	}
 
-	@include max(ti) {
-		min-height: 300px;
-		padding: 30px 15px 60px 15px;
+	&:hover #{$parent}__icon {
+		transform: scale(1.15);
 	}
 
-	&[data-solution-order="2"] {
-		transition-delay: 0.4s;
-	}
-
-	&[data-solution-order="3"] {
-		transition-delay: 0.8s;
-	}
-
-	&[data-solution-order="4"] {
-		transition-delay: 1.2s;
+	.flipped {
+		opacity: 1;
+		pointer-events: auto;
 	}
 
 	&.animate {
 		opacity: 0;
 
-		&[data-solution-order="1"],
-		&[data-solution-order="2"] {
+		&[data-solution-order="1"] {
 			transform: translateX(-50px);
 		}
 
-		&[data-solution-order="3"],
-		&[data-solution-order="4"] {
+		&[data-solution-order="2"] {
 			transform: translateX(50px);
 		}
 	}
 
-	&--empty {
-		background-color: transparent;
+	&[data-solution-order="2"] {
+		#{$parent}__bg img {
+			object-position: top;
+		}
 	}
 
-	&--bg {
+	&__bg-wrapper {
+		display: flex;
+		height: 100%;
+		padding: 21px 15px 21px 17px;
+
+		@include max(ti) {
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 40px;
+			padding: 15px;
+		}
+
 		&::before {
 			@include max(ti) {
 				position: absolute;
@@ -63,46 +65,29 @@
 		}
 	}
 
-	&--3 {
-		@include max(d) {
-			grid-column: 1 / span 2;
-		}
-
-		@include max(ti) {
-			grid-column: 1 / span 1;
-		}
-	}
-
-	&--4 {
-		@include max(d) {
-			grid-column: 1 / span 2;
-			order: 3;
-		}
-
-		@include max(ti) {
-			grid-column: 1 / span 1;
-		}
-	}
-
-	&--5 {
-		@include max(d) {
-			order: 2;
-		}
-	}
-
-	&--6 {
-		@include max(d) {
-			order: 1;
-		}
-	}
-
-	&__link {
+	&__front,
+	&__back {
 		position: absolute;
-		inset: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 31px 15px 31px 17px;
+		background-color: $color-card;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.3s ease;
 
-		&:hover ~ #{$parent}__text #{$parent}__icon {
-			transform: scale(1.15);
+		@include max(ti) {
+			padding: 30px 15px 60px 15px;
 		}
+	}
+
+	&__front {
+		z-index: 1;
+	}
+
+	&__back {
+		z-index: 2;
 	}
 
 	&__bg {
@@ -123,18 +108,21 @@
 		font-size: 20px;
 		line-height: 1.25;
 		margin-top: auto;
+		user-select: none;
 
 		@include max(ti) {
 			z-index: 1;
 			color: $white;
 			font-size: fluid(26, 30, 0, 768);
 			text-align: center;
+			margin-top: 0;
 		}
 	}
 
 	&__text {
 		font-size: 18px;
 		line-height: 1.25;
+		user-select: none;
 
 		@include max(tl) {
 			font-size: fluid(16, 18, 768, 992);
@@ -185,6 +173,19 @@
 		svg {
 			width: 100%;
 			height: 100%;
+		}
+	}
+
+	&__more {
+		position: relative;
+		z-index: 1;
+		display: none;
+		max-width: 150px;
+		width: 100%;
+		padding: 10px 20px;
+
+		@include max(ti) {
+			display: flex;
 		}
 	}
 }

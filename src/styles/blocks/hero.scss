@@ -8,7 +8,7 @@
 
 	&.animate {
 		#{$parent} {
-			&__bg {
+			/*&__bg {
 				opacity: 0;
 			}
 
@@ -19,7 +19,7 @@
 
 			&__button {
 				height: 0;
-			}
+			}*/
 		}
 	}
 
@@ -50,10 +50,10 @@
 		letter-spacing: -0.02em;
 		text-align: center;
 
-		&.split-title {
+		/*&.split-title {
 			overflow: hidden;
 			opacity: 0;
-		}
+		}*/
 
 		&.visible {
 			opacity: 1;

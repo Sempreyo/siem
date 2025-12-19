@@ -39,70 +39,69 @@ block main
 	section.solutions
 		.container.container--big
 			+title('Какие проблемы клиентов решает Solar SIEM?')
+			.solutions__tooltip Подробнее
 			.solutions__grid
-				.solutions__card.solutions-card.solutions-card--empty
-				.solutions__card.solutions-card.solutions-card--bg.solutions-card--1
-					.solutions-card__bg
-						+picture('solutions/1', 'png', 'solutions-card__bg-image', '')
-					.solutions-card__title Средний бизнес
-				.solutions__card.solutions-card.solutions-card--2.animate(data-solution-order='1')
-					a.solutions-card__link(href='#', target='_blank')
-					.solutions-card__text
-						b Проблема
-						ul
-							li Высокий порог входа в&nbsp;разработку и&nbsp;поддержку контента из&nbsp;<span style="white-space: nowrap;">SIEM-систем</span>
-							li Ограниченные ресурсы
-							li Дефицит квалифицированных специалистов
-						b Последствия:
-						p Средний бизнес становится лёгкой мишенью для&nbsp;атак, не&nbsp;имея ресурсов на&nbsp;полноценную защиту
+				.solutions-card.solutions-card--bg.animate(data-solution-order='1')
+					.solutions-card__bg-wrapper.flipped
+						.solutions-card__bg
+							+picture('solutions/1', 'png', 'solutions-card__bg-image', '')
+						.solutions-card__title Средний бизнес
+						+button('Подробнее', 'solutions-card__more')
+					.solutions-card__front
+						.solutions-card__text
+							b Проблема
+							ul
+								li Высокий порог входа в&nbsp;разработку и&nbsp;поддержку контента из&nbsp;<span style="white-space: nowrap;">SIEM-систем</span>
+								li Ограниченные ресурсы
+								li Дефицит квалифицированных специалистов
+							b Последствия:
+							p Средний бизнес становится лёгкой мишенью для&nbsp;атак, не&nbsp;имея ресурсов на&nbsp;полноценную защиту
 						.solutions-card__icon
 							+icon('arrow')
-				.solutions__card.solutions-card.solutions-card--3.animate(data-solution-order='2')
-					a.solutions-card__link(href='#', target='_blank')
-					.solutions-card__text
-						b Решение от&nbsp;Solar SIEM
-						ul
-							li.
-								Встроенный <span style="white-space: nowrap;">AI-ассистент</span> работает
-								на&nbsp;уровне <span style="white-space: nowrap;">senior-специалиста</span>
-							li Наличие SIEM и&nbsp;SOAR закрывает «базовый уровень защиты» и&nbsp;весь цикл работы с&nbsp;инцидентом
-							li Автоматизация процессов мониторинга, обработки и&nbsp;реагирования на&nbsp;инциденты
-							li Экспертиза Solar JSOC из&nbsp;«коробки»
-						b Результат:
-						p.
-							Solar SIEM позволяет бороться компаниям с&nbsp;небольшим штатом и&nbsp;невысоким уровнем экспертизы
-							на&nbsp;равных с&nbsp;крупными организациями
+					.solutions-card__back
+						.solutions-card__text
+							b Решение от&nbsp;Solar SIEM
+							ul
+								li.
+									Встроенный <span style="white-space: nowrap;">AI-ассистент</span> работает
+									на&nbsp;уровне <span style="white-space: nowrap;">senior-специалиста</span>
+								li Наличие SIEM и&nbsp;SOAR закрывает «базовый уровень защиты» и&nbsp;весь цикл работы с&nbsp;инцидентом
+								li Автоматизация процессов мониторинга, обработки и&nbsp;реагирования на&nbsp;инциденты
+								li Экспертиза Solar JSOC из&nbsp;«коробки»
+							b Результат:
+							p.
+								Solar SIEM позволяет бороться компаниям с&nbsp;небольшим штатом и&nbsp;невысоким уровнем экспертизы
+								на&nbsp;равных с&nbsp;крупными организациями
 						.solutions-card__icon
 							+icon('arrow')
-				.solutions__card.solutions-card.solutions-card--4.animate(data-solution-order='4')
-					a.solutions-card__link(href='#', target='_blank')
-					.solutions-card__text
-						b Решение Solar SIEM
-						ul
-							li Встроенные сценарии <br> реагирования с&nbsp;возможностью <br> гибкой настройки
-							li Профилирование данных для&nbsp;сокращения времени анализа
-							li Простое и&nbsp;удобное управление конфигурациями и&nbsp;исключениями для&nbsp;корреляционных правил
-						b Результат:
-						p Фокус сотрудников на&nbsp;стратегических задачах и&nbsp;предотвращении атак. <br> Рост киберустойчивости <br> инфраструктуры
+				.solutions-card.solutions-card--bg.animate(data-solution-order='2')
+					.solutions-card__bg-wrapper.flipped
+						.solutions-card__bg
+							+picture('solutions/2', 'png', 'solutions-card__bg-image', '')
+						.solutions-card__title Крупный бизнес и&nbsp;госструктуры (собственные SOC)
+						+button('Подробнее', 'solutions-card__more')
+					.solutions-card__front
+						.solutions-card__text
+							b Проблема
+							ul
+								li Высокая нагрузка на&nbsp;специалистов SOC
+								li Высокие трудозатраты <br> на&nbsp;рутинные операции
+								li Необходим централизованный <br> сбор данных со&nbsp;всех <br> информационных систем
+							b Последствия:
+							p Ниже эффективность работы специалистов SOC и&nbsp;выше риски позднего реагирования <br> на&nbsp;инциденты
 						.solutions-card__icon
 							+icon('arrow')
-				.solutions__card.solutions-card.solutions-card--5.animate(data-solution-order='3')
-					a.solutions-card__link(href='#', target='_blank')
-					.solutions-card__text
-						b Проблема
-						ul
-							li Высокая нагрузка на&nbsp;специалистов SOC
-							li Высокие трудозатраты <br> на&nbsp;рутинные операции
-							li Необходим централизованный <br> сбор данных со&nbsp;всех <br> информационных систем
-						b Последствия:
-						p Ниже эффективность работы специалистов SOC и&nbsp;выше риски позднего реагирования <br> на&nbsp;инциденты
+					.solutions-card__back
+						.solutions-card__text
+							b Решение Solar SIEM
+							ul
+								li Встроенные сценарии <br> реагирования с&nbsp;возможностью <br> гибкой настройки
+								li Профилирование данных для&nbsp;сокращения времени анализа
+								li Простое и&nbsp;удобное управление конфигурациями и&nbsp;исключениями для&nbsp;корреляционных правил
+							b Результат:
+							p Фокус сотрудников на&nbsp;стратегических задачах и&nbsp;предотвращении атак. <br> Рост киберустойчивости <br> инфраструктуры
 						.solutions-card__icon
 							+icon('arrow')
-				.solutions__card.solutions-card.solutions-card--bg.solutions-card--6
-					.solutions-card__bg
-						+picture('solutions/2', 'png', 'solutions-card__bg-image', '')
-					.solutions-card__title Крупный бизнес и&nbsp;госструктуры (собственные SOC)
-				.solutions__card.solutions-card.solutions-card--empty
 	section.banner
 		.container
 			.banner__wrapper
@@ -110,7 +109,7 @@ block main
 					+picture('banner/1', 'jpg', 'banner__bg-image', '')
 				.banner__content
 					.banner__title Готовы перейти на&nbsp;Solar SIEM?
-					+button('узнать больше', 'banner__button', '#')
+					+button('узнать больше', 'banner__button', 'https://www.cnews.ru/redirect.php?9893076945a4f986c77')
 	section.reason
 		.container
 			+title('Почему выбирают Solar SIEM')
@@ -128,7 +127,7 @@ block main
 					p Экспертиза Solar JSOC из&nbsp;«коробки»
 					+icon('line')(width='32', height='32', class='reason__line')
 				.reason__item.reason__item--accent.animate-single
-					p Снижаем порог входа для&nbsp;аналитиков
+					p Снижение порога входа для&nbsp;аналитиков
 					+icon('line')(width='32', height='32', class='reason__line')
 				.reason__item.animate-single
 					p.
@@ -140,7 +139,7 @@ block main
 					p Поддержка клиента обеспечивается на&nbsp;всех этапах, снимая главный страх рынка — сложность проекта
 					+icon('line')(width='32', height='32', class='reason__line reason__line--mobile')
 				.reason__item.reason__item--accent.animate-single
-					p Сопровождаем проект внедрения до&nbsp;результата
+					p Сопровождение проекта внедрения до&nbsp;результата
 	section.video
 		.container
 			.video__wrapper
@@ -149,7 +148,7 @@ block main
 					.video__play
 						+icon('play')(width='41', height='47')
 				video.video__frame(controls)
-					source(src='./images/video.mp4', type='video/mp4')
+					source(src='https://static.cnews.ru/video/2025/12/19/siem-video.mp4', type='video/mp4')
 	section.rules
 		.container
 			+title('Как Solar SIEM меняет правила игры')
@@ -181,7 +180,7 @@ block main
 				.rules__item
 					.rules__logo
 						+icon('rules-6')(class='rules__logo')
-					.rules__text Соответствие требованиям по&nbsp;импортозамещению
+					.rules__text Соответствие требованиям регуляторов по&nbsp;ИБ
 	section.cases.animate
 		.container
 			+title('Кейсы внедрения')
@@ -218,7 +217,7 @@ block main
 					+picture('banner/2', 'jpg', 'banner__bg-image', '')
 				.banner__content
 					.banner__title Оцените Solar SIEM в&nbsp;действии
-					+button('Хочу демонстрацию', 'banner__button', '#')
+					+button('Хочу демонстрацию', 'banner__button', 'https://www.cnews.ru/redirect.php?9893076945a4f986c77')
 	section.news
 		.container
 			+title('Новости о&nbsp;продукте')

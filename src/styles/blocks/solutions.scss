@@ -7,17 +7,13 @@
 
 	&__grid {
 		display: grid;
-		grid-template-columns: repeat(4, 400px);
+		grid-template-columns: repeat(2, 400px);
 		justify-content: center;
 		gap: 26px;
 		margin-top: 61px;
 
-		@include max(1750) {
-			grid-template-columns: repeat(3, 400px);
-		}
-
-		@include max(d) {
-			grid-template-columns: repeat(2, 1fr);
+		@include max(tl) {
+			grid-template-columns: repeat(2, 350px);
 		}
 
 		@include max(ti) {
@@ -26,28 +22,25 @@
 		}
 	}
 
-	&__card {
-		&:nth-child(4n + 1) {
-			right: 74px;
+	&__tooltip {
+		position: absolute;
+		z-index: 5;
+		padding: 10px;
+		background-color: $color-button;
+		border-radius: 6px;
+		color: $white;
+		font-size: 16px;
+		opacity: 0;
+		pointer-events: none;
+		will-change: transform;
+		transform: translate3d(0, 0, 0);
 
-			@include max(1900) {
-				right: unset;
-			}
+		@include max(ti) {
+			display: none;
 		}
 
-		&:nth-child(4n) {
-			left: 74px;
-
-			@include max(1900) {
-				left: unset;
-			}
-		}
-
-		&:first-child,
-		&:last-child {
-			@include max(1750) {
-				display: none;
-			}
+		&.visible {
+			opacity: 1;
 		}
 	}
 }

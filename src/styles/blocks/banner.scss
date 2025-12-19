@@ -22,11 +22,8 @@
 				max-width: 520px;
 				padding: 0 60px;
 
-				@include max(tl) {
-					max-width: 100%;
-				}
-
 				@include max(ti) {
+					max-width: 370px;
 					padding: 0 20px;
 				}
 			}
@@ -35,6 +32,11 @@
 				max-width: 296px;
 				padding: 12px 20px;
 				text-transform: unset;
+
+				@include max(ti) {
+					max-width: 200px;
+					padding: 10px 20px;
+				}
 			}
 		}
 	}
@@ -52,7 +54,7 @@
 		position: absolute;
 		inset: 0;
 
-		&::before {
+		/*&::before {
 			@include max(tl) {
 				position: absolute;
 				inset: 0;
@@ -60,7 +62,7 @@
 				content: "";
 				background-color: rgba(0, 0, 0, 0.7);
 			}
-		}
+		}*/
 	}
 
 	&__bg-image {
@@ -81,11 +83,12 @@
 
 		@include max(tl) {
 			z-index: 1;
-			align-items: center;
-			max-width: 100%;
+			align-items: flex-start;
+			/*max-width: 100%;*/
 		}
 
 		@include max(ti) {
+			max-width: 350px;
 			padding: 0 20px;
 		}
 	}
@@ -98,13 +101,13 @@
 		}
 
 		@include max(tl) {
-			color: $white;
+			/*color: $white;*/
 			font-size: fluid(34, 38, 768, 992);
-			text-align: center;
+			/*text-align: center;*/
 		}
 
 		@include max(ti) {
-			font-size: fluid(28, 34, 0, 768);
+			font-size: fluid(22, 34, 0, 768);
 		}
 	}
 
@@ -114,5 +117,10 @@
 		font-weight: 500;
 		font-size: 15px;
 		text-transform: uppercase;
+
+		@include max(ti) {
+			max-width: 200px;
+			padding: 10px 20px;
+		}
 	}
 }
